@@ -1,0 +1,33 @@
+{
+  "provider": "vastai",
+  "status": 200,
+  "queryTier": "T3",
+  "body": {
+    "offers": [
+      {
+        "id": 1122334,
+        "gpu_name": "A100 80GB PCIe",
+        "gpu_ram": 81920,
+        "dph_total": 1.892,
+        "rented": false,
+        "num_gpus": 1
+      },
+      {
+        "id": 5566778,
+        "gpu_name": "RTX 4090",
+        "gpu_ram": 24576,
+        "dph_total": 0.512,
+        "rented": false,
+        "num_gpus": 1
+      },
+      {
+        "id": 9900112,
+        "gpu_name": "H100 SXM",
+        "gpu_ram": 81920,
+        "dph_total": 2.744,
+        "rented": true,
+        "num_gpus": 1
+      }
+    ]
+  }
+}

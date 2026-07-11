@@ -1,0 +1,906 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Add dependencies and initialize shadcn/ui": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699606864
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699630223
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700052047
+      }
+    ],
+    "1.3 Wire CSS-variable theming, dark mode, and ThemeProvider": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699606952
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700064898
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700234463
+      }
+    ],
+    "2.1 Create developer role and onboarding migration": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699606992
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699630889
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700053882
+      }
+    ],
+    "2.2 Carry role and onboarding_completed into JWT and session": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607097
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700065487
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700235148
+      }
+    ],
+    "2.3 Implement middleware route guards": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607225
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700529166
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700724837
+      }
+    ],
+    "2.5 Declare legacy route redirects and update landing redirect target": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607372
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700066317
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700236321
+      }
+    ],
+    "3.1 Implement the pure-function module `lib/format.ts`": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607455
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699632056
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700052747
+      }
+    ],
+    "3.10 Define UI-facing response types": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607534
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700067342
+      },
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700237879
+      }
+    ],
+    "3.11 Extend the Typed_API_Client": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607648
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700529816
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700724074
+      }
+    ],
+    "3.13 Implement the `usePolling` hook": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607704
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700530613
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700726152
+      }
+    ],
+    "4. Checkpoint - foundation": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607755
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700763143
+      }
+    ],
+    "5.1 Implement `JobStatusBadge`": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607807
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700531367
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700722797
+      }
+    ],
+    "5.2 Implement `TierBadge`": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607904
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700532501
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700723219
+      }
+    ],
+    "5.3 Implement `ProviderBadge`": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699607955
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700763837
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706133358
+      }
+    ],
+    "5.4 Implement `CostDisplay`": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608009
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700764472
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706133244
+      }
+    ],
+    "5.5 Implement `SavingsPill` and its helpers": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608074
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700765276
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706133318
+      }
+    ],
+    "5.7 Implement `EmptyState` and `SkeletonScreen`": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608142
+      },
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700766542
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706133711
+      }
+    ],
+    "6.1 Implement `Dashboard_Shell`": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608192
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706134494
+      }
+    ],
+    "6.2 Implement `Admin_Shell` and NotAuthorized": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608313
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706135892
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706638151
+      }
+    ],
+    "7. Checkpoint - shared components and shells": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608367
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707881828
+      }
+    ],
+    "8.1 Rebuild the login page on shadcn (migration)": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608418
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706147911
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706638662
+      }
+    ],
+    "8.2 Implement register page (net-new)": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608525
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706653627
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707004272
+      }
+    ],
+    "8.3 Implement forgot-password and reset-password pages (net-new)": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608629
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707882598
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708306143
+      }
+    ],
+    "9.1 Implement the onboarding flow (net-new)": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608684
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707883452
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708306542
+      }
+    ],
+    "10.1 Implement Home_Page stat cards and quick-action panel": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608766
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706151615
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706639469
+      }
+    ],
+    "10.2 Implement live job feed and 6-month spend chart": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608865
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707884475
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708307617
+      }
+    ],
+    "11.1 Implement Jobs_Page table, filters, sort, and pagination": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699608969
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706149163
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706640446
+      }
+    ],
+    "12.1 Implement Job_Detail_Page header, cost breakdown, and estimator panel": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609023
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706652705
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707003668
+      }
+    ],
+    "12.2 Implement result panels and job actions": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609086
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707884996
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708308131
+      }
+    ],
+    "13.1 Implement Savings_Page hero, breakdown table, and cumulative chart": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609137
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706654611
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707005374
+      }
+    ],
+    "13.2 Implement the What_If_Calculator": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609235
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707887407
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708309256
+      }
+    ],
+    "14.1 Implement Api_Keys_Page table, create/revoke flows, and usage rows": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609283
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706150143
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706641488
+      }
+    ],
+    "15.1 Implement Billing_Page balance, top-up, summary, and invoices": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609335
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706655587
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707006335
+      }
+    ],
+    "16.1 Implement Docs_Page content and interactive API explorer": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609389
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708319748
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708787657
+      }
+    ],
+    "17.1 Implement Settings_Page account, preferences, theme, and danger zone": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609452
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706657054
+      },
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707007299
+      }
+    ],
+    "18. Checkpoint - user dashboard complete": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609516
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709091358
+      }
+    ],
+    "19.1 Implement Admin_Home_Page status bar, metric cards, and feeds": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609588
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708320710
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708786914
+      }
+    ],
+    "20.1 Implement Admin_Jobs_Page table, filters, export, and detail": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609691
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708322130
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708789522
+      }
+    ],
+    "21.1 Implement Admin_Users_Page table, detail drawer, and actions": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609737
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708322890
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708790584
+      }
+    ],
+    "22.1 Implement Admin_Providers_Page cards, actions, and node table": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609830
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708323929
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708788553
+      }
+    ],
+    "23.1 Implement Admin_Revenue_Page metrics, chart, and tables": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609887
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708800536
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709087590
+      }
+    ],
+    "24.1 Implement Admin_Estimator_Page accuracy overview, table, and registry editor": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699609939
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708802621
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709088534
+      }
+    ],
+    "25.1 Implement Admin_Logs_Page filters, top errors, and log list": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699610050
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708801536
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709089474
+      }
+    ],
+    "26.1 Implement Admin_Settings_Page configuration forms": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699610102
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708803740
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709090376
+      }
+    ],
+    "27. Final checkpoint - all surfaces integrated": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783699610150
+      },
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709092606
+      }
+    ],
+    "1. Dependencies and theme foundation": [
+      {
+        "executionId": "7ab8a326-76c1-4174-9cd5-7165b8aae652",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700234537
+      }
+    ],
+    "2. Auth, migration, routing, and middleware guards": [
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700724883
+      }
+    ],
+    "3. Pure functions, typed API client, and polling hook": [
+      {
+        "executionId": "111e3aaf-ad32-4d81-a90d-8daeaaa30c5e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783700726198
+      }
+    ],
+    "5. Shared component library": [
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706133758
+      }
+    ],
+    "6. Dashboard and Admin shells": [
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706638221
+      }
+    ],
+    "11. User dashboard - Jobs page (migration from `/jobs`)": [
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706640553
+      }
+    ],
+    "14. User dashboard - API Keys page (migration from `/keys`)": [
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783706641541
+      }
+    ],
+    "15. User dashboard - Billing page (migration from `/billing`)": [
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707006386
+      }
+    ],
+    "17. User dashboard - Settings page (net-new)": [
+      {
+        "executionId": "e6103382-1e54-49ee-87e7-9158681e554e",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783707007333
+      }
+    ],
+    "8. Authentication pages": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708306183
+      }
+    ],
+    "9. Onboarding flow": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708306564
+      }
+    ],
+    "10. User dashboard - Home page (net-new)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708307666
+      }
+    ],
+    "12. User dashboard - Job Detail page (net-new)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708308209
+      }
+    ],
+    "13. User dashboard - Savings page (net-new)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708309290
+      }
+    ],
+    "19. Admin dashboard - Home page (net-new)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708786952
+      }
+    ],
+    "16. User dashboard - Docs page (net-new)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708787701
+      }
+    ],
+    "22. Admin dashboard - Providers page (net-new; partially backend-blocked)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708788617
+      }
+    ],
+    "20. Admin dashboard - All Jobs page (net-new; backend-blocked)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708789554
+      }
+    ],
+    "21. Admin dashboard - Users page (net-new; backend-blocked)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783708790609
+      }
+    ],
+    "23. Admin dashboard - Revenue page (net-new; backend-blocked)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709087736
+      }
+    ],
+    "24. Admin dashboard - Estimator page (net-new; partially backend-blocked)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709088574
+      }
+    ],
+    "25. Admin dashboard - Logs page (net-new; backend-blocked)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709089548
+      }
+    ],
+    "26. Admin dashboard - Settings page (net-new; backend-blocked)": [
+      {
+        "executionId": "0d72c594-b87c-4598-995c-2776c952393c",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783709090408
+      }
+    ]
+  }
+}

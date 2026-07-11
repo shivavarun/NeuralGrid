@@ -1,0 +1,61 @@
+name: CI
+
+# NeuralGrid CI pipeline.
+#
+# The `core-calc-coverage-gate` job implements Requirement 22: it runs the unit
+# tests for the three billing-critical calculation modules (Compute_Estimator
+# estimation, Job_Scheduler node scoring, and cost calculation) with coverage
+# enabled. Vitest is configured (per service `vitest.config.ts`) with a 90% line
+# coverage threshold on each core module, so this job fails — and therefore
+# blocks the `deploy` job — on ANY failing test (Req 22.4) OR on <90% line
+# coverage of any of the three modules (Req 22.5).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  core-calc-coverage-gate:
+    name: Core calculation unit + coverage gate (Req 22)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # Shared types package must be built before services can import it.
+      - name: Install and build @neuralgrid/shared
+        working-directory: packages/shared
+        run: |
+          npm install
+          npm run build
+
+      - name: Compute_Estimator estimation module (Req 22.1)
+        working-directory: services/compute-estimator
+        run: |
+          npm install
+          npm run test:coverage
+
+      - name: Job_Scheduler node scoring module (Req 22.2)
+        working-directory: services/job-scheduler
+        run: |
+          npm install
+          npm run test:coverage
+
+      - name: Cost calculation module (Req 22.3)
+        working-directory: services/api-gateway
+        run: |
+          npm install
+          npm run test:coverage
+
+  deploy:
+    name: Deploy
+    needs: core-calc-coverage-gate # Req 22.4/22.5: deploy is blocked unless the gate passes.
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - run: echo "Coverage gate passed - proceeding with deployment."

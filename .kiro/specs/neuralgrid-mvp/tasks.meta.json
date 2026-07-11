@@ -1,0 +1,830 @@
+{
+  "pbtResults": {
+    "4.2 Write property test for cheapest node selection (Property 4)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782283415028
+    },
+    "2.3 Write property tests for VRAM calculation (Properties 1-3)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782283877794
+    },
+    "4.4 Write property tests for retry logic and cost calculation (Properties 5, 17, 18)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782285423263
+    },
+    "6.2 Write property test for authentication (Property 7)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782288260290
+    },
+    "6.5 Write property tests for validation (Properties 6, 15, 16)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782288303411
+    },
+    "6.7 Write property test for budget check (Property 8)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782288548116
+    },
+    "6.9 Write property tests for status and isolation (Properties 9, 10)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782296320386
+    },
+    "6.15 Write property test for model listing (Property 14)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782296331467
+    },
+    "6.11 Write property tests for result retrieval (Properties 11, 12)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782296349728
+    },
+    "6.13 Write property test for estimate response (Property 13)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782296872084
+    },
+    "8.5 Write property test for billing display (Property 19)": {
+      "status": "passed",
+      "lastRunTimestamp": 1782300700809
+    }
+  },
+  "executionHistory": {
+    "1.1 Initialize monorepo structure with services and shared packages": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956321
+      },
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219975641
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282036353
+      }
+    ],
+    "1.2 Define shared TypeScript interfaces and types": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956479
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282042272
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282835073
+      }
+    ],
+    "1.3 Create database migration scripts": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956606
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282042789
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282835871
+      }
+    ],
+    "2.1 Implement model registry loader": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956637
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282842543
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283122353
+      }
+    ],
+    "2.2 Implement VRAM calculation and tier assignment logic": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956679
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283130568
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283432186
+      }
+    ],
+    "2.3 Write property tests for VRAM calculation (Properties 1-3)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956718
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283443016
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284383969
+      }
+    ],
+    "2.4 Implement Compute_Estimator Express server and routes": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956752
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283443908
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284385033
+      }
+    ],
+    "3.1 Implement provider API clients": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956785
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282843234
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283122801
+      }
+    ],
+    "3.2 Implement Redis caching layer with 90s TTL": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956834
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283131254
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283433931
+      }
+    ],
+    "3.3 Implement Price_Aggregator Express server with polling": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956868
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283444615
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284385467
+      }
+    ],
+    "4.1 Implement cheapest node selection logic": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956901
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282844155
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283123759
+      }
+    ],
+    "4.2 Write property test for cheapest node selection (Property 4)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956945
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283132269
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283437033
+      }
+    ],
+    "4.3 Implement job dispatch and retry logic": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219956993
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782283445561
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284386449
+      }
+    ],
+    "4.4 Write property tests for retry logic and cost calculation (Properties 5, 17, 18)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957065
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284402388
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286276058
+      }
+    ],
+    "4.5 Implement worker pool and Job_Scheduler Express server": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957098
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284402336
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286276356
+      }
+    ],
+    "4.6 Implement provider failover logic": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957127
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284402291
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286277491
+      }
+    ],
+    "5. Checkpoint - Core services implemented": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957164
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286301470
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286308230
+      }
+    ],
+    "6.1 Implement authentication middleware": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957203
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286315732
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288118568
+      }
+    ],
+    "6.2 Write property test for authentication (Property 7)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957234
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288128649
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288348511
+      }
+    ],
+    "6.3 Implement rate limiting middleware": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957266
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286316119
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288119039
+      }
+    ],
+    "6.4 Implement input validation middleware": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957297
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286317100
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288119880
+      }
+    ],
+    "6.5 Write property tests for validation (Properties 6, 15, 16)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957323
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288127148
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288349823
+      }
+    ],
+    "6.6 Implement job submission endpoint (POST /v1/jobs)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957355
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288127724
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288350630
+      }
+    ],
+    "6.7 Write property test for budget check (Property 8)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957397
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288360041
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782295943013
+      }
+    ],
+    "6.8 Implement job status endpoint (GET /v1/jobs/:id)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957427
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288359967
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782295943921
+      }
+    ],
+    "6.9 Write property tests for status and isolation (Properties 9, 10)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957466
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296222409
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296944885
+      }
+    ],
+    "6.10 Implement job result endpoint (GET /v1/jobs/:id/result)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957488
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288360257
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782295944744
+      }
+    ],
+    "6.11 Write property tests for result retrieval (Properties 11, 12)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957520
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296223094
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296945869
+      }
+    ],
+    "6.12 Implement cost estimate endpoint (GET /v1/models/:model_id/estimate)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957542
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288360598
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782295945846
+      }
+    ],
+    "6.13 Write property test for estimate response (Property 13)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957572
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296223834
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296946621
+      }
+    ],
+    "6.14 Implement models listing endpoint (GET /v1/models)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957601
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782288361531
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782295946904
+      }
+    ],
+    "6.15 Write property test for model listing (Property 14)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957625
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296224806
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296947351
+      }
+    ],
+    "6.16 Implement billing recording and Stripe integration": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957652
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782295961438
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296214461
+      }
+    ],
+    "6.17 Wire up API_Gateway Express server": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957682
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296225702
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296948413
+      }
+    ],
+    "7. Checkpoint - API_Gateway complete": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957707
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296955881
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296962651
+      }
+    ],
+    "8.1 Initialize Next.js app with NextAuth": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957731
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296969993
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782297559051
+      }
+    ],
+    "8.2 Implement jobs page": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957759
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782297565872
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300349365
+      }
+    ],
+    "8.3 Implement API key management page": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957787
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782297566751
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300351201
+      }
+    ],
+    "8.4 Implement billing page": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957820
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782297567349
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300350136
+      }
+    ],
+    "8.5 Write property test for billing display (Property 19)": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957843
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300358079
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300949621
+      }
+    ],
+    "9.1 Create Docker configuration for each service": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957866
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300359083
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300950660
+      }
+    ],
+    "9.2 Write integration tests for end-to-end job lifecycle": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957893
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300959694
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782301190668
+      }
+    ],
+    "10. Final checkpoint - All services integrated": [
+      {
+        "executionId": "8128efdb-6839-4d59-9811-18d7ec89130c",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782219957921
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782301198114
+      },
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782301205082
+      }
+    ],
+    "1. Project structure and shared types": [
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782282835899
+      }
+    ],
+    "2. Compute_Estimator service": [
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284385068
+      }
+    ],
+    "3. Price_Aggregator service": [
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782284385504
+      }
+    ],
+    "4. Job_Scheduler service": [
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782286277524
+      }
+    ],
+    "6. API_Gateway service": [
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782296948452
+      }
+    ],
+    "8. Dashboard (Next.js)": [
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782300949661
+      }
+    ],
+    "9. Integration and wiring": [
+      {
+        "executionId": "b1ef3f01-ff2c-42b5-9483-d18547027965",
+        "chatSessionId": "sess_6b24d3af-e170-4e83-baa3-02eed5919dde",
+        "timestamp": 1782301190720
+      }
+    ]
+  }
+}

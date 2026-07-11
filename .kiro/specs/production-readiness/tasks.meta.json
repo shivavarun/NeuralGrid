@@ -1,0 +1,931 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Write migration extending `jobs` and adding production tables": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359430
+      },
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608383859
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783612884505
+      }
+    ],
+    "1.2 Add production-readiness types and error codes to `packages/shared`": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359625
+      },
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608384576
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783612884998
+      }
+    ],
+    "2.1 Implement Idempotency_Key enforcement in API_Gateway": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359724
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783612895228
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626603496
+      }
+    ],
+    "3.1 Implement Soft_Queue with FIFO ordering and tier-bump": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359795
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783612896478
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626605198
+      }
+    ],
+    "4.1 Implement Circuit_Breaker": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359847
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783612896996
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626611012
+      }
+    ],
+    "5.1 Implement Job_Timeout computation and monitor": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359879
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626684628
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626703635
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626965749
+      }
+    ],
+    "6.1 Implement Output_Validator": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359922
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626684714
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626704932
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626968241
+      }
+    ],
+    "7.1 Implement OOM_Retry": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608359956
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626684928
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626709050
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626968603
+      }
+    ],
+    "8. Checkpoint - Job_Scheduler reliability mechanisms complete": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360004
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626684958
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627003095
+      }
+    ],
+    "9.1 Implement `billing_events` ledger and margin line items": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360042
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626684982
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627021317
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627900928
+      }
+    ],
+    "9.4 Implement margin-detail retrieval": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360103
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685014
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627930480
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628241757
+      }
+    ],
+    "10.1 Implement synchronous auto-refund": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360193
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685038
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627022479
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627901262
+      }
+    ],
+    "11.1 Implement ledger Reconciliation_Job": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360229
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685068
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627023726
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627901936
+      }
+    ],
+    "11.3 Implement Stripe Reconciliation_Job": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360271
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685099
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627025477
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627902944
+      }
+    ],
+    "12. Checkpoint - Billing_Service complete": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360310
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685123
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627927375
+      }
+    ],
+    "13.1 Implement hashed API key storage and masked display": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360342
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685173
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627026389
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627903716
+      }
+    ],
+    "14.1 Implement Secrets_Manager client": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360376
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685207
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627931262
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628242868
+      }
+    ],
+    "15.1 Implement admin route guard and Admin_Session re-auth": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360411
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685237
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627931657
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628243912
+      }
+    ],
+    "16.1 Implement Audit_Log recording": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360468
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685267
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627932710
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628246652
+      }
+    ],
+    "17.1 Implement inbound signature and replay verification": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360500
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685297
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627932304
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628247215
+      }
+    ],
+    "18.1 Implement Data_Retention_Job": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360551
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685321
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628272870
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628726430
+      }
+    ],
+    "19.1 Implement input-cap validation and cap-config cost check": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360595
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685346
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628273668
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628727140
+      }
+    ],
+    "20. Checkpoint - Security hardening complete": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360633
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685398
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628737685
+      }
+    ],
+    "21.1 Implement structured transition logging": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360666
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685426
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628738851
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629336497
+      }
+    ],
+    "22.1 Implement rolling metrics and estimator accuracy": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360710
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685447
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628740059
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629337696
+      }
+    ],
+    "23.1 Implement Notification_Service paging": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360759
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685470
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628741219
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629338545
+      }
+    ],
+    "24.1 Implement per-job distributed tracing": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360796
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685504
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628742308
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629339730
+      }
+    ],
+    "25.1 Implement price staleness enforcement and SLO wiring": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360837
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685532
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628742535
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629340020
+      }
+    ],
+    "26. Checkpoint - Observability and alerting complete": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360876
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685560
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629353410
+      }
+    ],
+    "27.1 Wire unit-coverage gate for estimator, scoring, and cost modules": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360907
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685583
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629354446
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630740539
+      }
+    ],
+    "28.1 Implement contract tests for every Provider_Adapter": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360938
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685606
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629355826
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630742437
+      }
+    ],
+    "29.1 Implement the pre-deploy load test": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608360997
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685626
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629357930
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630743459
+      }
+    ],
+    "30.1 Implement the provider-kill chaos test": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608361026
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685670
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629358665
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630743537
+      }
+    ],
+    "31. Checkpoint - CI gates complete": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608361067
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685700
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630763619
+      }
+    ],
+    "32.1 Implement the Go_Live_Checklist gate": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608361112
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685725
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630764495
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783631062814
+      }
+    ],
+    "33. Final checkpoint - Production readiness complete": [
+      {
+        "executionId": "443df9d4-2b70-481b-88a8-f62458ceba11",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783608361150
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626685746
+      },
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783631070342
+      }
+    ],
+    "1. Database schema and shared types for production readiness": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783612885029
+      }
+    ],
+    "2. Idempotent job submission": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626603620
+      }
+    ],
+    "3. Soft_Queue and tier-bump": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626605234
+      }
+    ],
+    "4. Circuit_Breaker for provider adapters": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626611048
+      }
+    ],
+    "5. Job_Timeout detection and recovery": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626965826
+      }
+    ],
+    "6. Output_Validator before job completion": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626968281
+      }
+    ],
+    "7. OOM_Retry auto-retry at higher tier": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783626968636
+      }
+    ],
+    "10. Automatic refund on post-charge job failure": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627901288
+      }
+    ],
+    "11. Reconciliation jobs": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627902978
+      }
+    ],
+    "13. API key hashing at rest": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783627903772
+      }
+    ],
+    "9. Billing ledger and margin auditability": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628241821
+      }
+    ],
+    "14. Secrets_Manager integration": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628242906
+      }
+    ],
+    "15. Admin RBAC and session re-authentication": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628244036
+      }
+    ],
+    "16. Audit log append-only semantics": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628246701
+      }
+    ],
+    "17. Stripe and provider callback signature verification": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628247439
+      }
+    ],
+    "18. Job input data retention and purge": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628726470
+      }
+    ],
+    "19. Input size and cost cap validation": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783628727179
+      }
+    ],
+    "21. Structured job state transition logging": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629336567
+      }
+    ],
+    "22. Operational metrics collection": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629337750
+      }
+    ],
+    "23. Alerting on threshold breach": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629338567
+      }
+    ],
+    "24. Distributed tracing per job": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629339751
+      }
+    ],
+    "25. Price freshness and SLO tracking": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783629340043
+      }
+    ],
+    "27. CI unit-test coverage gate for core calculations": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630740569
+      }
+    ],
+    "28. CI provider adapter contract test gate": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630742485
+      }
+    ],
+    "29. CI load test gate": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630743484
+      }
+    ],
+    "30. CI chaos test gate": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783630743562
+      }
+    ],
+    "32. Production go-live checklist gate": [
+      {
+        "executionId": "a3d87071-eb6d-4b65-a104-68237d94eebe",
+        "chatSessionId": "sess_0521515c-7e53-4758-b7f2-cc14a9863f8a",
+        "timestamp": 1783631062879
+      }
+    ]
+  }
+}

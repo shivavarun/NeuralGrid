@@ -1,0 +1,35 @@
+{
+  "provider": "runpod",
+  "status": 200,
+  "queryTier": "T3",
+  "body": {
+    "data": {
+      "gpuTypes": [
+        {
+          "id": "NVIDIA A100 80GB PCIe",
+          "displayName": "A100 80GB",
+          "memoryInGb": 80,
+          "communityPrice": 1.64,
+          "securePrice": 2.29,
+          "available": true
+        },
+        {
+          "id": "NVIDIA RTX A6000",
+          "displayName": "RTX A6000",
+          "memoryInGb": 48,
+          "communityPrice": null,
+          "securePrice": 0.79,
+          "available": true
+        },
+        {
+          "id": "NVIDIA GeForce RTX 4090",
+          "displayName": "RTX 4090",
+          "memoryInGb": 24,
+          "communityPrice": 0.44,
+          "securePrice": 0.69,
+          "available": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,186 @@
+version: '3.9'
+
+services:
+
+  # ── Infrastructure ──────────────────────────────────────────────
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: neuralgrid
+      POSTGRES_USER: neuralgrid
+      POSTGRES_PASSWORD: neuralgrid_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U neuralgrid"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - neuralgrid
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - neuralgrid
+
+  # ── NeuralGrid Services ─────────────────────────────────────────
+
+  compute-estimator:
+    build:
+      context: .
+      dockerfile: ./services/compute-estimator/Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      REDIS_URL: redis://redis:6379
+      MODEL_REGISTRY_PATH: /app/data/model_registry.yaml
+      PORT: 8001
+      ENV: development
+    volumes:
+      - ./model_registry.yaml:/app/data/model_registry.yaml:ro
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8001/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - neuralgrid
+
+  price-aggregator:
+    build:
+      context: .
+      dockerfile: ./services/price-aggregator/Dockerfile
+    ports:
+      - "8003:8003"
+    environment:
+      REDIS_URL: redis://redis:6379
+      VASTAI_API_KEY: ${VASTAI_API_KEY:-}
+      RUNPOD_API_KEY: ${RUNPOD_API_KEY:-}
+      POLL_INTERVAL_SECONDS: 60
+      PORT: 8003
+      ENV: development
+    depends_on:
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8003/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - neuralgrid
+
+  job-scheduler:
+    build:
+      context: .
+      dockerfile: ./services/job-scheduler/Dockerfile
+    ports:
+      - "8002:8002"
+    environment:
+      DATABASE_URL: postgresql://neuralgrid:neuralgrid_dev@postgres:5432/neuralgrid
+      REDIS_URL: redis://redis:6379
+      COMPUTE_ESTIMATOR_URL: http://compute-estimator:8001
+      PRICE_AGGREGATOR_URL: http://price-aggregator:8003
+      WORKER_POOL_SIZE: 10
+      PORT: 8002
+      ENV: development
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8002/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - neuralgrid
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: ./services/api-gateway/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      DATABASE_URL: postgresql://neuralgrid:neuralgrid_dev@postgres:5432/neuralgrid
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: dev_jwt_secret_change_in_prod
+      STRIPE_SECRET_KEY: ${STRIPE_SECRET_KEY:-}
+      COMPUTE_ESTIMATOR_URL: http://compute-estimator:8001
+      JOB_SCHEDULER_URL: http://job-scheduler:8002
+      PRICE_AGGREGATOR_URL: http://price-aggregator:8003
+      PORT: 8080
+      ENV: development
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      compute-estimator:
+        condition: service_healthy
+      price-aggregator:
+        condition: service_healthy
+      job-scheduler:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:8080/health', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      start_period: 15s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - neuralgrid
+
+  dashboard:
+    build:
+      context: ./dashboard
+    ports:
+      - "3000:3000"
+    environment:
+      NEXTAUTH_URL: http://localhost:3000
+      NEXTAUTH_SECRET: dev_nextauth_secret
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+      NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: ${STRIPE_PUBLISHABLE_KEY:-}
+    depends_on:
+      api-gateway:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3000', (r) => { process.exit(r.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    restart: unless-stopped
+    networks:
+      - neuralgrid
+
+volumes:
+  postgres_data:
+
+networks:
+  neuralgrid:
+    driver: bridge

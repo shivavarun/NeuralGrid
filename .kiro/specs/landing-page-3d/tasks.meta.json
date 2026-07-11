@@ -1,0 +1,493 @@
+{
+  "pbtResults": {},
+  "executionHistory": {
+    "1.1 Add 3D rendering and animation dependencies to dashboard `package.json`": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179019
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319195539
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319657574
+      }
+    ],
+    "1.3 Extend Tailwind theme with `ng-*` color tokens and gradient utilities": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179057
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319196132
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319658971
+      }
+    ],
+    "2.1 Create `wasteFactors.ts` content data": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179098
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319197897
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319659995
+      }
+    ],
+    "2.2 Create `competitors.ts` content data": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179171
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319200184
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319660859
+      }
+    ],
+    "2.3 Create `pricingTiers.ts` content data": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179199
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319200966
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319661331
+      }
+    ],
+    "2.4 Create hero and AMD callout copy constants": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179225
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319676924
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319940726
+      }
+    ],
+    "3.1 Implement `transforms.ts` pure functions": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179251
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319678710
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319939641
+      }
+    ],
+    "4. Checkpoint - transform utilities validated": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179305
+      }
+    ],
+    "5.1 Implement `usePrefersReducedMotion` hook": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179331
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319682692
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319941640
+      }
+    ],
+    "5.2 Implement `useWebglSupported` hook": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179366
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319684212
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319942582
+      }
+    ],
+    "5.3 Implement `useComplexityTier` hook": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179402
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319686213
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319943601
+      }
+    ],
+    "6.1 Implement `StaticFallback` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179426
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319963682
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320068249
+      }
+    ],
+    "6.2 Implement `ChipModel` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179456
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320126920
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320488049
+      }
+    ],
+    "6.3 Implement `GpuScene` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179487
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320499281
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320595704
+      }
+    ],
+    "6.4 Implement `GpuSceneOrFallback` client component with dynamic import boundary": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179517
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320596101
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320712670
+      }
+    ],
+    "7. Checkpoint - GPU scene complete": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179554
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320719864
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320803506
+      }
+    ],
+    "8.1 Implement `HeroSection` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179616
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320804615
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320932014
+      }
+    ],
+    "9.1 Implement `ProblemSection` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179647
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320956247
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321143685
+      }
+    ],
+    "9.2 Implement `HowItWorksSection` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179676
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320956538
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321143176
+      }
+    ],
+    "9.3 Implement `AmdCalloutSection` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179704
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320958120
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321141737
+      }
+    ],
+    "9.4 Implement `ComparisonSection` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179747
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320958390
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321142674
+      }
+    ],
+    "9.5 Implement `PricingSection` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179775
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320961104
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321144048
+      }
+    ],
+    "9.6 Implement `FooterCtaSection` component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179801
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321151787
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321267477
+      }
+    ],
+    "10.1 Implement `LandingPage` composition component": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179837
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321284375
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321414067
+      }
+    ],
+    "10.2 Wire `app/page.tsx` route": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179883
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321414255
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321493060
+      }
+    ],
+    "11. Final checkpoint - all sections integrated": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319179923
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321507217
+      },
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783322391434
+      }
+    ],
+    "1. Dependencies and theme setup": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319658997
+      }
+    ],
+    "3. Interaction transform utilities": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319939740
+      }
+    ],
+    "2. Content data and copy constants": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319940752
+      }
+    ],
+    "5. Client capability hooks": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783319943658
+      }
+    ],
+    "6. GPU scene 3D components": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320713049
+      }
+    ],
+    "8. Hero section": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783320932122
+      }
+    ],
+    "9. Landing page sections": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321267598
+      }
+    ],
+    "10. Page composition and routing": [
+      {
+        "executionId": "6fb4bfe1-9292-41bb-b5ff-1b1ee33cb408",
+        "chatSessionId": "sess_c1a4121b-0db2-445f-9f44-d53404c9525d",
+        "timestamp": 1783321493093
+      }
+    ]
+  }
+}

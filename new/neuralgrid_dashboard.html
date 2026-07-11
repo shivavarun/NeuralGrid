@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuralGrid — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0A0D10; --bg-alt:#0D1116; --panel:#12171C; --panel-raised:#161C22;
+    --line:#212930; --line-soft:#1A2026; --text:#E7EDF2; --muted:#8B96A1; --muted-dim:#5C6670;
+    --t1:#3DDC97; --t1-dim:rgba(61,220,151,0.12);
+    --t2:#F5A623; --t2-dim:rgba(245,166,35,0.12);
+    --t3:#FF5470; --t3-dim:rgba(255,84,112,0.12);
+    --cyan:#7FD1FF; --cyan-dim:rgba(127,209,255,0.12);
+    --font-display:'Space Grotesk',sans-serif; --font-body:'Inter',sans-serif; --font-mono:'JetBrains Mono',monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--bg); color:var(--text); font-family:var(--font-body); font-size:14px;}
+  button{font-family:inherit; cursor:pointer;}
+  input,select,textarea{font-family:inherit;}
+
+  .app{display:grid; grid-template-columns:240px 1fr; min-height:100vh;}
+
+  /* SIDEBAR */
+  .sidebar{background:var(--panel); border-right:1px solid var(--line-soft); display:flex; flex-direction:column; padding:20px 14px;}
+  .logo{font-family:var(--font-display); font-weight:700; font-size:17px; display:flex; align-items:center; gap:8px; padding:6px 8px 22px;}
+  .logo .dot{width:7px; height:7px; background:var(--t1); border-radius:2px; box-shadow:0 0 6px var(--t1);}
+  .new-job-btn{
+    background:var(--t1); color:#06140D; border:none; border-radius:7px; padding:10px 12px;
+    font-family:var(--font-mono); font-weight:600; font-size:13px; display:flex; align-items:center; gap:8px;
+    margin-bottom:18px; transition:transform .15s;
+  }
+  .new-job-btn:hover{transform:translateY(-1px);}
+  .nav{display:flex; flex-direction:column; gap:2px; flex:1;}
+  .nav-item{
+    display:flex; align-items:center; gap:10px; padding:9px 10px; border-radius:6px;
+    color:var(--muted); font-size:13.5px; font-weight:500; text-decoration:none; border:none; background:none;
+    width:100%; text-align:left; transition:background .12s, color .12s;
+  }
+  .nav-item svg{width:16px; height:16px; opacity:0.85; flex-shrink:0;}
+  .nav-item:hover{background:var(--panel-raised); color:var(--text);}
+  .nav-item.active{background:var(--t1-dim); color:var(--t1);}
+  .upgrade{
+    border:1px solid var(--line); border-radius:8px; padding:12px; margin-bottom:14px;
+    font-size:12px; color:var(--muted);
+  }
+  .upgrade .up-title{color:var(--text); font-weight:600; margin-bottom:4px; font-size:12.5px;}
+  .upgrade a{color:var(--t1); font-family:var(--font-mono); font-size:11.5px;}
+  .user-row{display:flex; align-items:center; gap:9px; padding:8px; border-top:1px solid var(--line-soft); padding-top:14px;}
+  .avatar{width:26px; height:26px; border-radius:50%; background:linear-gradient(135deg,var(--t1),var(--cyan)); flex-shrink:0;}
+  .user-row .u-info{font-size:12px; line-height:1.3; overflow:hidden;}
+  .u-info .u-email{color:var(--muted); font-size:11px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .plan-badge{font-family:var(--font-mono); font-size:9px; color:var(--muted-dim); border:1px solid var(--line); padding:1px 6px; border-radius:10px; margin-top:2px; display:inline-block;}
+
+  /* MAIN */
+  .main{display:flex; flex-direction:column;}
+  .topbar{
+    height:56px; border-bottom:1px solid var(--line-soft); display:flex; align-items:center;
+    justify-content:space-between; padding:0 28px; flex-shrink:0;
+  }
+  .page-title{font-family:var(--font-display); font-size:17px; font-weight:600;}
+  .top-right{display:flex; align-items:center; gap:16px;}
+  .search-box{
+    background:var(--panel); border:1px solid var(--line); border-radius:6px; padding:6px 12px;
+    font-size:12.5px; color:var(--muted-dim); width:220px; font-family:var(--font-mono);
+  }
+  .bell{width:18px; height:18px; color:var(--muted); position:relative;}
+  .bell .badge-dot{position:absolute; top:-2px; right:-2px; width:6px; height:6px; background:var(--t3); border-radius:50%;}
+
+  .content{padding:28px; flex:1; overflow-y:auto;}
+  .view{display:none;}
+  .view.active{display:block;}
+
+  /* STAT CARDS */
+  .stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-bottom:26px;}
+  .stat-card{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:16px 18px;}
+  .stat-label{font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.07em; color:var(--muted-dim); margin-bottom:8px;}
+  .stat-value{font-family:var(--font-display); font-size:24px; font-weight:600; margin-bottom:4px;}
+  .stat-sub{font-size:12px; color:var(--muted);}
+  .stat-sub.pos{color:var(--t1);}
+  .live-tag{display:inline-flex; align-items:center; gap:5px; font-size:9.5px; color:var(--t1); font-family:var(--font-mono); float:right;}
+  .live-dot{width:5px; height:5px; border-radius:50%; background:var(--t1); animation:pulse 1.6s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:.25;}}
+
+  .panel{background:var(--panel); border:1px solid var(--line); border-radius:10px; margin-bottom:20px;}
+  .panel-head{padding:16px 18px; border-bottom:1px solid var(--line-soft); display:flex; justify-content:space-between; align-items:center;}
+  .panel-head h3{font-family:var(--font-display); font-size:14.5px; font-weight:600;}
+
+  /* TABLE */
+  table{width:100%; border-collapse:collapse;}
+  th{text-align:left; font-family:var(--font-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:0.06em; color:var(--muted-dim); font-weight:500; padding:10px 18px; border-bottom:1px solid var(--line-soft);}
+  td{padding:13px 18px; border-bottom:1px solid var(--line-soft); font-size:13px;}
+  tr:last-child td{border-bottom:none;}
+  tr.rowhover:hover{background:var(--panel-raised); cursor:pointer;}
+  .mono{font-family:var(--font-mono); font-size:12.5px;}
+  .id-cell{color:var(--muted);}
+
+  .badge{font-family:var(--font-mono); font-size:11px; padding:3px 8px; border-radius:4px; font-weight:600; display:inline-block;}
+  .badge-t1{background:var(--t1-dim); color:var(--t1);}
+  .badge-t2{background:var(--t2-dim); color:var(--t2);}
+  .badge-t3{background:var(--t3-dim); color:var(--t3);}
+  .status{font-family:var(--font-mono); font-size:11px; padding:3px 9px; border-radius:4px; font-weight:500; display:inline-flex; align-items:center; gap:5px;}
+  .status-complete{background:var(--t1-dim); color:var(--t1);}
+  .status-failed{background:var(--t3-dim); color:var(--t3);}
+  .status-running{background:var(--cyan-dim); color:var(--cyan);}
+  .status-queued{background:rgba(139,150,161,0.12); color:var(--muted);}
+  .status-running .s-dot{width:5px; height:5px; border-radius:50%; background:var(--cyan); animation:pulse 1.2s infinite;}
+  .save-green{color:var(--t1); font-family:var(--font-mono); font-size:12px; font-weight:600;}
+
+  /* FILTER BAR */
+  .filter-bar{display:flex; gap:10px; padding:14px 18px; border-bottom:1px solid var(--line-soft); flex-wrap:wrap;}
+  .pill-select, .search-mini{
+    background:var(--bg-alt); border:1px solid var(--line); border-radius:6px; padding:7px 11px;
+    font-size:12.5px; color:var(--muted); font-family:var(--font-mono);
+  }
+  .filter-pill{
+    background:var(--bg-alt); border:1px solid var(--line); border-radius:20px; padding:6px 13px;
+    font-size:12px; color:var(--muted); font-family:var(--font-mono);
+  }
+  .filter-pill.active{background:var(--t1-dim); border-color:var(--t1); color:var(--t1);}
+
+  /* BUTTONS */
+  .btn-sm{
+    font-family:var(--font-mono); font-size:12px; font-weight:500; padding:7px 13px; border-radius:6px;
+    border:1px solid var(--line); background:var(--bg-alt); color:var(--text);
+  }
+  .btn-sm:hover{border-color:var(--muted-dim);}
+  .btn-accent{
+    font-family:var(--font-mono); font-size:12.5px; font-weight:600; padding:9px 16px; border-radius:6px;
+    border:none; background:var(--t1); color:#06140D;
+  }
+  .btn-accent:hover{filter:brightness(1.05);}
+  .btn-accent:disabled{background:var(--line); color:var(--muted-dim); cursor:not-allowed;}
+  .btn-danger{background:var(--t3-dim); color:var(--t3); border:1px solid var(--t3);}
+
+  /* EMPTY STATE */
+  .empty-state{padding:60px 20px; text-align:center;}
+  .empty-state .e-icon{font-size:28px; margin-bottom:14px; opacity:.5;}
+  .empty-state h4{font-family:var(--font-display); font-size:15px; margin-bottom:6px;}
+  .empty-state p{color:var(--muted); font-size:13px; margin-bottom:18px;}
+
+  /* SUBMIT JOB VIEW */
+  .job-form-grid{display:grid; grid-template-columns:1.2fr 0.8fr; gap:20px;}
+  .field{margin-bottom:16px;}
+  .field label{display:block; font-family:var(--font-mono); font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--muted-dim); margin-bottom:7px;}
+  .field select, .field input, .field textarea{
+    width:100%; background:var(--bg-alt); border:1px solid var(--line); border-radius:7px;
+    padding:10px 12px; color:var(--text); font-size:13.5px;
+  }
+  .field select:focus, .field input:focus, .field textarea:focus{outline:none; border-color:var(--t1);}
+  .field textarea{resize:vertical; min-height:100px; font-family:var(--font-body);}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .model-opt-tier{font-family:var(--font-mono); color:var(--muted-dim); font-size:11px;}
+
+  .estimator-panel{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:20px; position:sticky; top:20px; font-family:var(--font-mono);}
+  .est-head{font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--muted-dim); margin-bottom:16px; display:flex; justify-content:space-between;}
+  .est-row{display:flex; justify-content:space-between; margin-bottom:14px; font-size:13px;}
+  .est-row .el{color:var(--muted-dim); font-size:11px; text-transform:uppercase; letter-spacing:0.05em;}
+  .est-row .ev{font-weight:700; font-size:15px;}
+  .tier-track{display:flex; gap:6px; margin-bottom:16px;}
+  .tier-led{flex:1; text-align:center; padding:8px 4px; border-radius:6px; border:1px solid var(--line); background:var(--bg-alt); font-size:10px; color:var(--muted-dim); font-weight:600; transition:all .3s;}
+  .tier-led.on-t1{background:var(--t1-dim); border-color:var(--t1); color:var(--t1);}
+  .tier-led.on-t2{background:var(--t2-dim); border-color:var(--t2); color:var(--t2);}
+  .tier-led.on-t3{background:var(--t3-dim); border-color:var(--t3); color:var(--t3);}
+  .est-divider{border-top:1px solid var(--line-soft); margin:16px 0;}
+  .est-note{font-size:11.5px; color:var(--t2); background:var(--t2-dim); padding:9px 11px; border-radius:6px; margin-bottom:16px; font-family:var(--font-body); display:none;}
+  .est-note.show{display:block;}
+  .balance-warn{font-size:11.5px; color:var(--t3); background:var(--t3-dim); padding:9px 11px; border-radius:6px; margin-bottom:12px; font-family:var(--font-body); display:none;}
+
+  /* API KEYS */
+  .key-cell{font-family:var(--font-mono); color:var(--muted);}
+
+  /* MODAL */
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(5,7,9,0.7); display:none; align-items:center; justify-content:center; z-index:50;
+  }
+  .modal-overlay.show{display:flex;}
+  .modal{background:var(--panel-raised); border:1px solid var(--line); border-radius:12px; padding:26px; width:420px; max-width:90vw;}
+  .modal h3{font-family:var(--font-display); font-size:16px; margin-bottom:16px;}
+  .modal .key-reveal{
+    background:var(--bg-alt); border:1px solid var(--t1); border-radius:7px; padding:12px;
+    font-family:var(--font-mono); font-size:12.5px; color:var(--t1); word-break:break-all; margin-bottom:12px; display:flex; justify-content:space-between; align-items:center; gap:10px;
+  }
+  .modal .warn{font-size:12px; color:var(--t2); background:var(--t2-dim); padding:10px 12px; border-radius:6px; margin-bottom:18px;}
+  .modal-actions{display:flex; justify-content:flex-end; gap:10px; margin-top:6px;}
+  .copy-btn{background:none; border:1px solid var(--line); color:var(--muted); border-radius:5px; padding:4px 9px; font-size:11px; font-family:var(--font-mono); flex-shrink:0;}
+
+  /* TOAST */
+  .toast{
+    position:fixed; bottom:24px; left:264px; background:var(--panel-raised); border:1px solid var(--line);
+    border-radius:8px; padding:12px 16px; display:flex; align-items:center; gap:12px; font-size:13px;
+    box-shadow:0 8px 24px rgba(0,0,0,0.4); z-index:60;
+  }
+  .toast.error{border-left:3px solid var(--t3);}
+  .toast .t-msg{color:var(--text);}
+  .toast .t-action{font-family:var(--font-mono); color:var(--t1); font-size:12px; background:none; border:none;}
+  .toast .t-close{color:var(--muted-dim); background:none; border:none; font-size:14px;}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="logo"><span class="dot"></span>NeuralGrid</div>
+    <button class="new-job-btn" onclick="showView('submit')">+ New Job</button>
+    <div class="nav">
+      <button class="nav-item" data-view="home" onclick="showView('home')">⌂ Home</button>
+      <button class="nav-item active" data-view="jobs" onclick="showView('jobs')">▤ Jobs</button>
+      <button class="nav-item" data-view="submit" onclick="showView('submit')">＋ Submit Job</button>
+      <button class="nav-item" data-view="savings" onclick="showView('savings')">◬ Savings</button>
+      <button class="nav-item" data-view="keys" onclick="showView('keys')">⚿ API Keys</button>
+      <button class="nav-item" data-view="billing" onclick="showView('billing')">$ Billing</button>
+      <button class="nav-item" data-view="docs" onclick="showView('docs')">▣ Docs</button>
+    </div>
+    <div class="upgrade">
+      <div class="up-title">Free plan — $2.00 credit</div>
+      <div>10 req/min · 100 req/day</div>
+      <a href="#">Upgrade to Pro →</a>
+    </div>
+    <div class="user-row">
+      <div class="avatar"></div>
+      <div class="u-info">alex@buildlabs.dev<div class="plan-badge">FREE</div></div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="topbar">
+      <div class="page-title" id="pageTitle">Jobs</div>
+      <div class="top-right">
+        <input class="search-box" placeholder="Search job ID or model...">
+        <div class="bell">🔔<span class="badge-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <!-- HOME VIEW -->
+      <div class="view" id="view-home">
+        <div class="stat-row">
+          <div class="stat-card"><span class="live-tag"><span class="live-dot"></span>live</span><div class="stat-label">Jobs today</div><div class="stat-value">47</div><div class="stat-sub">44 succeeded, 3 failed</div></div>
+          <div class="stat-card"><span class="live-tag"><span class="live-dot"></span>live</span><div class="stat-label">Spend today</div><div class="stat-value">$0.0342</div><div class="stat-sub">vs $0.2310 without NeuralGrid</div></div>
+          <div class="stat-card"><span class="live-tag"><span class="live-dot"></span>live</span><div class="stat-label">Saved today</div><div class="stat-value">$0.1968</div><div class="stat-sub pos">85% below baseline</div></div>
+          <div class="stat-card"><div class="stat-label">Balance</div><div class="stat-value">$4.23</div><div class="stat-sub">Top up if under $1.00</div></div>
+        </div>
+        <div class="panel">
+          <div class="panel-head"><h3>Live job feed</h3><button class="btn-sm" onclick="showView('jobs')">View all</button></div>
+          <table>
+            <tbody id="homeFeedBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- JOBS VIEW -->
+      <div class="view active" id="view-jobs">
+        <div class="panel">
+          <div class="filter-bar">
+            <span class="filter-pill active">All</span>
+            <span class="filter-pill">Running</span>
+            <span class="filter-pill">Complete</span>
+            <span class="filter-pill">Failed</span>
+            <span class="filter-pill">Queued</span>
+            <select class="pill-select"><option>Last 7 days</option></select>
+            <input class="search-mini" placeholder="Filter by model...">
+          </div>
+          <table>
+            <thead><tr><th>Job ID</th><th>Model</th><th>Tier</th><th>Provider</th><th>Status</th><th>Cost</th><th>Saved</th><th>Submitted</th></tr></thead>
+            <tbody id="jobsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SUBMIT JOB VIEW -->
+      <div class="view" id="view-submit">
+        <div class="job-form-grid">
+          <div>
+            <div class="panel" style="padding:20px;">
+              <div class="field">
+                <label>Job type</label>
+                <select id="jobType" onchange="updateEstimate()">
+                  <option value="llm">LLM Inference</option>
+                  <option value="image">Image Generation</option>
+                  <option value="audio">Audio Generation</option>
+                  <option value="embed">Embeddings</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Model</label>
+                <select id="modelSelect" onchange="updateEstimate()">
+                  <option value="llama-3-8b" data-tier="t1" data-vram="8.5" data-conf="HIGH">llama-3-8b <span class="model-opt-tier">· T1</span></option>
+                  <option value="mistral-7b" data-tier="t1" data-vram="7.8" data-conf="HIGH">mistral-7b · T1</option>
+                  <option value="llama-3-70b" data-tier="t3" data-vram="62" data-conf="HIGH">llama-3-70b · T3</option>
+                  <option value="sdxl" data-tier="t2" data-vram="8" data-conf="HIGH">stable-diffusion-xl · T2</option>
+                  <option value="flux" data-tier="t2" data-vram="12" data-conf="MEDIUM">flux · T2</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Prompt / input</label>
+                <textarea id="promptInput" placeholder="Write your prompt..." oninput="updateEstimate()"></textarea>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label>Max tokens</label>
+                  <input type="number" id="maxTokens" value="512" oninput="updateEstimate()">
+                </div>
+                <div class="field">
+                  <label>Quantization</label>
+                  <select id="quant" onchange="updateEstimate()">
+                    <option value="int8">int8</option>
+                    <option value="fp16">fp16</option>
+                    <option value="int4">int4</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="estimator-panel">
+            <div class="est-head"><span>Estimator preview</span><span style="color:var(--t1);">●&nbsp;live</span></div>
+            <div class="est-row"><span class="el">VRAM needed</span><span class="ev" id="pVram">8.5 GB</span></div>
+            <div class="est-row"><span class="el">Confidence</span><span class="ev" id="pConf" style="color:var(--t1); font-size:12px;">HIGH</span></div>
+            <div class="tier-track">
+              <div class="tier-led" id="pT1">T1</div>
+              <div class="tier-led" id="pT2">T2</div>
+              <div class="tier-led" id="pT3">T3</div>
+            </div>
+            <div class="est-note" id="lowConfNote">We don't have exact specs for this model — routed one tier up to avoid a failed job.</div>
+            <div class="est-divider"></div>
+            <div class="est-row"><span class="el">Routes to</span><span class="ev" id="pProvider" style="font-size:13px;">Vast.ai</span></div>
+            <div class="est-row"><span class="el">Est. cost</span><span class="ev" id="pCost" style="color:var(--t1);">$0.0023</span></div>
+            <div class="est-row"><span class="el">vs A100 baseline</span><span class="ev" id="pSaved" style="font-size:12px; color:var(--muted);">saves 82%</span></div>
+            <div class="balance-warn" id="balanceWarn">Balance too low for this job. <a href="#" onclick="showView('billing')" style="color:var(--t3); text-decoration:underline;">Add funds</a></div>
+            <button class="btn-accent" style="width:100%;" id="submitJobBtn" onclick="submitJob()">Submit Job</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAVINGS VIEW (stub, spec'd fully in Dashboard PRD §1.6) -->
+      <div class="view" id="view-savings">
+        <div class="panel" style="padding:24px;">
+          <div class="stat-label">Total saved vs going direct to RunPod</div>
+          <div style="font-family:var(--font-display); font-size:36px; font-weight:700; color:var(--t1); margin:8px 0;">$41.28</div>
+          <div class="stat-sub">Across 1,204 jobs since signup — see Dashboard PRD §1.6 for full breakdown table + what-if calculator.</div>
+        </div>
+      </div>
+
+      <!-- API KEYS VIEW -->
+      <div class="view" id="view-keys">
+        <div class="panel">
+          <div class="panel-head">
+            <h3>API Keys</h3>
+            <button class="btn-accent" onclick="openKeyModal()">+ Generate API key</button>
+          </div>
+          <table>
+            <thead><tr><th>Label</th><th>Key</th><th>Created</th><th>Last used</th><th>Status</th><th></th></tr></thead>
+            <tbody id="keysTableBody">
+              <tr>
+                <td>Production</td>
+                <td class="key-cell">ngr_live_••••••••3f2a</td>
+                <td class="mono" style="color:var(--muted);">Jun 12, 2026</td>
+                <td class="mono" style="color:var(--muted);">2m ago</td>
+                <td><span class="status status-complete">active</span></td>
+                <td><button class="btn-sm btn-danger">Revoke</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- BILLING VIEW (stub) -->
+      <div class="view" id="view-billing">
+        <div class="panel" style="padding:24px;">
+          <div class="stat-label">Current balance</div>
+          <div style="font-family:var(--font-display); font-size:32px; font-weight:700; margin:8px 0;">$4.23</div>
+          <button class="btn-accent">Add funds</button>
+          <p style="color:var(--muted); margin-top:16px; font-size:13px;">Full spend summary, payment methods, and invoices — see Dashboard PRD §1.8.</p>
+        </div>
+      </div>
+
+      <!-- DOCS VIEW (stub) -->
+      <div class="view" id="view-docs">
+        <div class="panel" style="padding:24px;">
+          <p style="color:var(--muted); font-size:13px;">Quickstart, API reference, and interactive explorer — see Dashboard PRD §1.9.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- API KEY GENERATE MODAL -->
+<div class="modal-overlay" id="keyModalOverlay">
+  <div class="modal">
+    <div id="keyModalStep1">
+      <h3>Generate API key</h3>
+      <div class="field"><label>Label</label><input type="text" id="keyLabelInput" placeholder="e.g. Production, Local dev"></div>
+      <div class="modal-actions">
+        <button class="btn-sm" onclick="closeKeyModal()">Cancel</button>
+        <button class="btn-accent" onclick="revealKey()">Generate</button>
+      </div>
+    </div>
+    <div id="keyModalStep2" style="display:none;">
+      <h3>Copy your key now</h3>
+      <div class="key-reveal"><span id="fullKeyText">ngr_live_8f3a91c2e7b04d6f9a1c3f2a</span><button class="copy-btn" onclick="copyKey()">Copy</button></div>
+      <div class="warn">You won't be able to see this key again after closing this window.</div>
+      <div class="modal-actions">
+        <button class="btn-accent" onclick="confirmKeyCopied()">I've copied my key</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast error" id="toast" style="display:none;">
+  <span class="t-msg" id="toastMsg">Couldn't refresh jobs — retrying...</span>
+  <button class="t-close" onclick="document.getElementById('toast').style.display='none'">✕</button>
+</div>
+
+<script>
+// ---- NAV ----
+function showView(name){
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById('view-' + name).classList.add('active');
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  const btn = document.querySelector('.nav-item[data-view="' + name + '"]');
+  if(btn) btn.classList.add('active');
+  const titles = {home:'Home', jobs:'Jobs', submit:'Submit Job', savings:'Savings', keys:'API Keys', billing:'Billing', docs:'Docs'};
+  document.getElementById('pageTitle').textContent = titles[name];
+}
+
+// ---- SAMPLE DATA ----
+const sampleJobs = [
+  {id:'job_01HX3KDE6F7G8H9J0K1L2M3N', model:'llama-3-8b', tier:'t1', provider:'MI210 partition', status:'complete', cost:'$0.0048', saved:'87%', time:'2m ago'},
+  {id:'job_01HX3KCD5E6F7G8H9J0K1L2M', model:'mistral-7b', tier:'t1', provider:'MI210 partition', status:'failed', cost:'$0.0000', saved:'—', time:'18m ago'},
+  {id:'job_01HX3KBC4D5E6F7G8H9J0K1L', model:'llama-3-70b', tier:'t3', provider:'MI300X full node', status:'queued', cost:'estimating...', saved:'—', time:'22m ago'},
+  {id:'job_01HX3KAB2C3D4E5F6G7H8J9K', model:'stable-diffusion-xl', tier:'t2', provider:'MI300X partition', status:'running', cost:'---', saved:'—', time:'just now'},
+  {id:'job_01HX3K9M7N2P4Q5R6S7T8U9V', model:'llama-3-8b', tier:'t1', provider:'MI210 partition', status:'complete', cost:'$0.0042', saved:'91%', time:'1h ago'}
+];
+
+function statusHtml(s){
+  const map = {complete:'complete', failed:'failed', running:'running', queued:'queued'};
+  const dot = s === 'running' ? '<span class="s-dot"></span>' : '';
+  return `<span class="status status-${map[s]}">${dot}${s}</span>`;
+}
+function tierHtml(t){ return `<span class="badge badge-${t}">${t.toUpperCase()}</span>`; }
+
+function renderTable(targetId, limit){
+  const rows = (limit ? sampleJobs.slice(0, limit) : sampleJobs).map(j => `
+    <tr class="rowhover">
+      <td class="mono id-cell">${j.id.slice(0,14)}...</td>
+      <td>${j.model}</td>
+      <td>${tierHtml(j.tier)}</td>
+      <td style="color:var(--muted);">${j.provider}</td>
+      <td>${statusHtml(j.status)}</td>
+      <td class="mono">${j.cost}</td>
+      <td class="save-green">${j.saved !== '—' ? 'saved ' + j.saved : '—'}</td>
+      <td class="mono" style="color:var(--muted);">${j.time}</td>
+    </tr>`).join('');
+  document.getElementById(targetId).innerHTML = rows;
+}
+renderTable('jobsTableBody');
+renderTable('homeFeedBody', 5);
+
+// ---- ESTIMATOR PREVIEW ----
+function updateEstimate(){
+  const sel = document.getElementById('modelSelect');
+  const opt = sel.options[sel.selectedIndex];
+  const tier = opt.dataset.tier;
+  const vram = opt.dataset.vram;
+  const conf = opt.dataset.conf;
+
+  document.getElementById('pVram').textContent = vram + ' GB';
+  const confEl = document.getElementById('pConf');
+  confEl.textContent = conf;
+  confEl.style.color = conf === 'HIGH' ? 'var(--t1)' : conf === 'MEDIUM' ? 'var(--t2)' : 'var(--t3)';
+
+  ['pT1','pT2','pT3'].forEach(id => {
+    const el = document.getElementById(id);
+    el.className = 'tier-led';
+  });
+  document.getElementById('p' + tier.toUpperCase()).classList.add('on-' + tier);
+
+  document.getElementById('lowConfNote').classList.toggle('show', conf === 'MEDIUM' || conf === 'LOW');
+
+  const priceMap = {t1:['MI210 partition','$0.0023','92%'], t2:['MI300X partition','$0.0180','82%'], t3:['MI300X full node','$0.1720','75%']};
+  const [provider, cost, saved] = priceMap[tier];
+  document.getElementById('pProvider').textContent = provider;
+  document.getElementById('pCost').textContent = cost;
+  document.getElementById('pSaved').textContent = 'saves ' + saved;
+
+  const promptEmpty = document.getElementById('promptInput').value.trim() === '';
+  const balanceTooLow = tier === 't3'; // demo: T3 always shown as needing top-up for illustration
+  document.getElementById('balanceWarn').style.display = balanceTooLow ? 'block' : 'none';
+  document.getElementById('submitJobBtn').disabled = promptEmpty || balanceTooLow;
+}
+updateEstimate();
+
+function submitJob(){
+  const btn = document.getElementById('submitJobBtn');
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = 'Submit Job';
+    showView('jobs');
+    showToastMsg('Job submitted — tracking in Jobs.', false);
+  }, 900);
+}
+
+// ---- API KEY MODAL ----
+function openKeyModal(){
+  document.getElementById('keyModalOverlay').classList.add('show');
+  document.getElementById('keyModalStep1').style.display = 'block';
+  document.getElementById('keyModalStep2').style.display = 'none';
+  document.getElementById('keyLabelInput').value = '';
+}
+function closeKeyModal(){ document.getElementById('keyModalOverlay').classList.remove('show'); }
+function revealKey(){
+  document.getElementById('keyModalStep1').style.display = 'none';
+  document.getElementById('keyModalStep2').style.display = 'block';
+}
+function copyKey(){
+  navigator.clipboard?.writeText(document.getElementById('fullKeyText').textContent);
+  showToastMsg('Copied to clipboard.', false);
+}
+function confirmKeyCopied(){
+  closeKeyModal();
+  showToastMsg('API key created.', false);
+}
+
+// ---- TOAST ----
+function showToastMsg(msg, isError){
+  const t = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = msg;
+  t.style.borderLeftColor = isError ? 'var(--t3)' : 'var(--t1)';
+  t.style.display = 'flex';
+  setTimeout(() => { t.style.display = 'none'; }, 4000);
+}
+</script>
+</body>
+</html>

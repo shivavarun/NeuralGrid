@@ -1,0 +1,319 @@
+# NeuralGrid Model Registry
+# Format: each model maps to VRAM requirements per quantization
+# tier is assigned at DEFAULT quantization
+# vram_gb values include 20% overhead buffer
+
+models:
+
+  # ── Llama 3 family ─────────────────────────────────────────────
+  llama-3-1b:
+    family: llama
+    params_billions: 1
+    default_quantization: int8
+    vram_gb: { fp32: 5, fp16: 3, int8: 1.5, int4: 1 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  llama-3-3b:
+    family: llama
+    params_billions: 3
+    default_quantization: int8
+    vram_gb: { fp32: 14, fp16: 7, int8: 4, int4: 2 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  llama-3-8b:
+    family: llama
+    params_billions: 8
+    default_quantization: int8
+    vram_gb: { fp32: 38, fp16: 19, int8: 10, int4: 5 }
+    tier: T1  # at int8
+    input_types: [text]
+    output_types: [text]
+    notes: "T1 at int4/int8, T2 at fp16"
+
+  llama-3-13b:
+    family: llama
+    params_billions: 13
+    default_quantization: int8
+    vram_gb: { fp32: 62, fp16: 31, int8: 16, int4: 8 }
+    tier: T2
+    input_types: [text]
+    output_types: [text]
+
+  llama-3-70b:
+    family: llama
+    params_billions: 70
+    default_quantization: int4
+    vram_gb: { fp16: 140, int8: 70, int4: 40 }
+    tier: T3
+    input_types: [text]
+    output_types: [text]
+
+  llama-3-405b:
+    family: llama
+    params_billions: 405
+    default_quantization: int4
+    vram_gb: { int4: 240 }
+    tier: T3
+    input_types: [text]
+    output_types: [text]
+    notes: "Requires multiple GPUs even at int4"
+
+  # ── Mistral / Mixtral ──────────────────────────────────────────
+  mistral-7b:
+    family: mistral
+    params_billions: 7
+    default_quantization: int8
+    vram_gb: { fp32: 34, fp16: 17, int8: 9, int4: 5 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  mistral-7b-instruct:
+    family: mistral
+    params_billions: 7
+    default_quantization: int8
+    vram_gb: { fp32: 34, fp16: 17, int8: 9, int4: 5 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  mixtral-8x7b:
+    family: mixtral
+    params_billions: 47
+    default_quantization: int4
+    vram_gb: { fp16: 94, int8: 48, int4: 26 }
+    tier: T2
+    input_types: [text]
+    output_types: [text]
+    notes: "MoE architecture, active params ~13B but full model 47B"
+
+  mistral-large:
+    family: mistral
+    params_billions: 123
+    default_quantization: int4
+    vram_gb: { int4: 70 }
+    tier: T3
+    input_types: [text]
+    output_types: [text]
+
+  # ── Google Gemma ───────────────────────────────────────────────
+  gemma-2b:
+    family: gemma
+    params_billions: 2
+    default_quantization: fp16
+    vram_gb: { fp32: 10, fp16: 5, int8: 3, int4: 2 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  gemma-7b:
+    family: gemma
+    params_billions: 7
+    default_quantization: int8
+    vram_gb: { fp32: 34, fp16: 17, int8: 9, int4: 5 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  gemma-27b:
+    family: gemma
+    params_billions: 27
+    default_quantization: int4
+    vram_gb: { fp16: 54, int8: 27, int4: 15 }
+    tier: T2
+    input_types: [text]
+    output_types: [text]
+
+  # ── Microsoft Phi ──────────────────────────────────────────────
+  phi-3-mini:
+    family: phi
+    params_billions: 3.8
+    default_quantization: fp16
+    vram_gb: { fp32: 18, fp16: 9, int8: 5, int4: 3 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  phi-3-small:
+    family: phi
+    params_billions: 7
+    default_quantization: fp16
+    vram_gb: { fp32: 34, fp16: 17, int8: 9, int4: 5 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  phi-3-medium:
+    family: phi
+    params_billions: 14
+    default_quantization: fp16
+    vram_gb: { fp32: 67, fp16: 34, int8: 17, int4: 9 }
+    tier: T2
+    input_types: [text]
+    output_types: [text]
+
+  # ── Qwen2 ──────────────────────────────────────────────────────
+  qwen2-7b:
+    family: qwen
+    params_billions: 7
+    default_quantization: int8
+    vram_gb: { fp32: 34, fp16: 17, int8: 9, int4: 5 }
+    tier: T1
+    input_types: [text]
+    output_types: [text]
+
+  qwen2-72b:
+    family: qwen
+    params_billions: 72
+    default_quantization: int4
+    vram_gb: { int8: 72, int4: 40 }
+    tier: T3
+    input_types: [text]
+    output_types: [text]
+
+  # ── Image Generation ───────────────────────────────────────────
+  stable-diffusion-1.5:
+    family: diffusion
+    default_quantization: fp16
+    vram_gb: { fp32: 4, fp16: 2 }
+    tier: T1
+    input_types: [text, image]
+    output_types: [image]
+    notes: "Very low VRAM; can run on almost any GPU"
+
+  stable-diffusion-2.1:
+    family: diffusion
+    default_quantization: fp16
+    vram_gb: { fp32: 5, fp16: 3 }
+    tier: T1
+    input_types: [text, image]
+    output_types: [image]
+
+  stable-diffusion-xl:
+    family: diffusion
+    default_quantization: fp16
+    vram_gb: { fp32: 14, fp16: 8 }
+    tier: T2
+    input_types: [text, image]
+    output_types: [image]
+    notes: "Needs 10GB+ for batch gen; 8GB minimum for single image"
+
+  stable-diffusion-xl-turbo:
+    family: diffusion
+    default_quantization: fp16
+    vram_gb: { fp32: 14, fp16: 8 }
+    tier: T2
+    input_types: [text, image]
+    output_types: [image]
+
+  flux-1-schnell:
+    family: flux
+    default_quantization: fp16
+    vram_gb: { fp32: 24, fp16: 12 }
+    tier: T2
+    input_types: [text]
+    output_types: [image]
+    notes: "Fast, 4-step inference"
+
+  flux-1-dev:
+    family: flux
+    default_quantization: fp16
+    vram_gb: { fp32: 24, fp16: 12 }
+    tier: T2
+    input_types: [text]
+    output_types: [image]
+    notes: "Higher quality, more steps"
+
+  # ── Audio / Speech ─────────────────────────────────────────────
+  whisper-tiny:
+    family: whisper
+    default_quantization: fp16
+    vram_gb: { fp32: 0.5, fp16: 0.3 }
+    tier: T1
+    input_types: [audio]
+    output_types: [text]
+
+  whisper-base:
+    family: whisper
+    default_quantization: fp16
+    vram_gb: { fp32: 1, fp16: 0.5 }
+    tier: T1
+    input_types: [audio]
+    output_types: [text]
+
+  whisper-small:
+    family: whisper
+    default_quantization: fp16
+    vram_gb: { fp32: 2, fp16: 1 }
+    tier: T1
+    input_types: [audio]
+    output_types: [text]
+
+  whisper-medium:
+    family: whisper
+    default_quantization: fp16
+    vram_gb: { fp32: 5, fp16: 3 }
+    tier: T1
+    input_types: [audio]
+    output_types: [text]
+
+  whisper-large-v3:
+    family: whisper
+    default_quantization: fp16
+    vram_gb: { fp32: 12, fp16: 6 }
+    tier: T1
+    input_types: [audio]
+    output_types: [text]
+
+  musicgen-small:
+    family: musicgen
+    default_quantization: fp16
+    vram_gb: { fp32: 8, fp16: 4 }
+    tier: T1
+    input_types: [text]
+    output_types: [audio]
+
+  musicgen-medium:
+    family: musicgen
+    default_quantization: fp16
+    vram_gb: { fp32: 12, fp16: 6 }
+    tier: T1
+    input_types: [text]
+    output_types: [audio]
+
+  musicgen-large:
+    family: musicgen
+    default_quantization: fp16
+    vram_gb: { fp32: 16, fp16: 8 }
+    tier: T1
+    input_types: [text]
+    output_types: [audio]
+
+  # ── Embeddings ─────────────────────────────────────────────────
+  bge-large-en:
+    family: embedding
+    default_quantization: fp16
+    vram_gb: { fp32: 1.3, fp16: 0.7 }
+    tier: T1
+    input_types: [text]
+    output_types: [embedding]
+
+  e5-large-v2:
+    family: embedding
+    default_quantization: fp16
+    vram_gb: { fp32: 1.3, fp16: 0.7 }
+    tier: T1
+    input_types: [text]
+    output_types: [embedding]
+
+  nomic-embed-text:
+    family: embedding
+    default_quantization: fp16
+    vram_gb: { fp32: 0.8, fp16: 0.4 }
+    tier: T1
+    input_types: [text]
+    output_types: [embedding]
