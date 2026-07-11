@@ -39,9 +39,11 @@ export function Sidebar() {
   return (
     <div className="flex h-full w-[240px] flex-col bg-[#12171C] border-r border-[#1A2026] p-5">
       {/* Logo */}
-      <div className="flex items-center gap-2 px-2 pb-5 font-bold text-[17px] tracking-tight">
-        <span className="h-[7px] w-[7px] rounded-sm bg-[#3DDC97] shadow-[0_0_6px_#3DDC97]" />
-        <span className="font-display">NeuralGrid</span>
+      <div className="flex items-center gap-2 px-2 pb-5">
+        <img src="/logo-mark.svg" alt="NeuralGrid" className="h-7 w-7" />
+        <span className="font-display text-[17px] font-bold tracking-tight">
+          Neural<span className="text-[#3DDC97]">Grid</span>
+        </span>
       </div>
 
       {/* New Job button */}

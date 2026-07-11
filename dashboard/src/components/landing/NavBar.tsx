@@ -19,11 +19,11 @@ export function NavBar() {
 
   return (
     <nav className="relative flex items-center justify-between border-b border-[#1A2026] px-6 py-5">
-      <Link
-        href="/"
-        className="font-[family-name:var(--font-display)] text-lg font-bold tracking-tight text-[#E7EDF2]"
-      >
-        Neural<span className="text-[#7FD1FF]">Grid</span>
+      <Link href="/" className="flex items-center gap-2">
+        <img src="/logo-mark.svg" alt="NeuralGrid" className="h-8 w-8" />
+        <span className="font-display text-lg font-bold tracking-tight text-[#E7EDF2]">
+          Neural<span className="text-[#3DDC97]">Grid</span>
+        </span>
       </Link>
 
       {!isMobile && (

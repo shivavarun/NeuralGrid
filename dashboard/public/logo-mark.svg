@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="chipClip">
+      <rect x="4" y="4" width="112" height="112" rx="26" ry="26"/>
+    </clipPath>
+  </defs>
+
+  <!-- chip base -->
+  <rect x="4" y="4" width="112" height="112" rx="26" ry="26" fill="#12171C" stroke="#212930" stroke-width="2"/>
+
+  <!-- partitioned die: one full-height region (T3), split right column (T2 top / T1 bottom) -->
+  <g clip-path="url(#chipClip)">
+    <rect x="4" y="4" width="46" height="112" fill="#FF5470" fill-opacity="0.16"/>
+    <rect x="50" y="4" width="66" height="54" fill="#F5A623" fill-opacity="0.16"/>
+    <rect x="50" y="58" width="66" height="58" fill="#3DDC97" fill-opacity="0.16"/>
+
+    <!-- partition lines -->
+    <line x1="50" y1="4" x2="50" y2="116" stroke="#0A0D10" stroke-width="2.5"/>
+    <line x1="50" y1="58" x2="116" y2="58" stroke="#0A0D10" stroke-width="2.5"/>
+
+    <!-- tier indicator dots -->
+    <circle cx="18" cy="18" r="4" fill="#FF5470"/>
+    <circle cx="64" cy="18" r="4" fill="#F5A623"/>
+    <circle cx="64" cy="72" r="4" fill="#3DDC97"/>
+  </g>
+
+  <!-- outer frame -->
+  <rect x="4" y="4" width="112" height="112" rx="26" ry="26" fill="none" stroke="#2A333B" stroke-width="1.5"/>
+</svg>

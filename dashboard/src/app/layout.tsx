@@ -9,6 +9,10 @@ const monoFont = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
 export const metadata = {
   title: 'NeuralGrid — Automatic GPU Tier Routing on AMD Developer Cloud',
   description: 'NeuralGrid profiles every job and routes it to the smallest AMD Instinct partition that can run it. Same output. Lower bill.',
+  icons: {
+    icon: '/logo-mark.svg',
+    apple: '/logo-mark.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
