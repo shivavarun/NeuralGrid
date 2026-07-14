@@ -37,18 +37,25 @@ interface HomeStats {
 }
 
 async function fetchHomeStats(): Promise<HomeStats> {
-  // Mock — replace with real API call when backend is ready
-  return {
-    jobsToday: 47,
-    jobsSucceeded: 44,
-    jobsFailed: 3,
-    spendToday: 0.0342,
-    spendBaseline: 0.231,
-    savedToday: 0.1968,
-    savedPct: 85,
-    balance: 4.23,
-    lastJobDaysAgo: 0,
-  };
+  try {
+    const res = await fetch("/api/demo");
+    if (!res.ok) throw new Error("fetch failed");
+    const json = await res.json();
+    return json.stats;
+  } catch {
+    // Fallback if API unreachable
+    return {
+      jobsToday: 47,
+      jobsSucceeded: 44,
+      jobsFailed: 3,
+      spendToday: 0.0342,
+      spendBaseline: 0.231,
+      savedToday: 0.1968,
+      savedPct: 85,
+      balance: 4.23,
+      lastJobDaysAgo: 0,
+    };
+  }
 }
 
 // --- Live job feed mock ---
@@ -78,7 +85,14 @@ const MOCK_FEED: FeedJob[] = [
 ];
 
 async function fetchJobFeed(): Promise<FeedJob[]> {
-  return MOCK_FEED;
+  try {
+    const res = await fetch("/api/demo");
+    if (!res.ok) throw new Error("fetch failed");
+    const json = await res.json();
+    return json.feed;
+  } catch {
+    return MOCK_FEED;
+  }
 }
 
 // --- 6-month spend chart mock ---

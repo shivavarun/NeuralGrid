@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu } from "lucide-react";
 import { Sidebar } from "@/components/dashboard/Sidebar";
 import { TopBar } from "@/components/dashboard/TopBar";
+import { ToastProvider } from "@/components/shared/Toast";
 import {
   Sheet,
   SheetContent,
@@ -44,6 +45,7 @@ export default function DashboardLayout({
       <div className="flex flex-1 flex-col md:ml-[240px]">
         <TopBar />
         <main className="flex-1 overflow-y-auto p-7">{children}</main>
+        <ToastProvider />
       </div>
     </div>
   );
